@@ -1,6 +1,7 @@
 package com.example.smartlab
 
 import android.content.Intent
+import android.content.SharedPreferences
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.CountDownTimer
@@ -8,17 +9,32 @@ import android.view.WindowManager
 import kotlin.concurrent.timer
 
 class MainActivity : AppCompatActivity() {
+    var skip: SharedPreferences?=null
+    var state = 0
+    var checkT: Boolean=false
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
      window.setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN)
         setContentView(R.layout.activity_main)
-        val timer = object :CountDownTimer(5000, 1000){
+        skip=getSharedPreferences(TABLE, MODE_PRIVATE)
+        state = skip?.getInt("button_state", 0)!!
+        val timer = object :CountDownTimer(3000, 1000){
             override fun onTick(millisUntilFinished: Long) {
+
+                if (state==1) {
+                        checkT = true
+                }else{
+                    checkT = false
+                }
                 }
 
             override fun onFinish() {
-                Intent(this@MainActivity, ActivityOnboard::class.java).apply{
-                    startActivity(this)
+                if (checkT) {
+                    val intent =Intent(this@MainActivity, RegandLogActivity::class.java)
+                        startActivity(intent)
+                }else{
+                    val intent =Intent(this@MainActivity, ActivityOnboard::class.java)
+                    startActivity(intent)
                 }
                 finish()
             }

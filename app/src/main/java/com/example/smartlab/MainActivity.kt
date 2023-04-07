@@ -21,19 +21,15 @@ class MainActivity : AppCompatActivity() {
         val timer = object :CountDownTimer(3000, 1000){
             override fun onTick(millisUntilFinished: Long) {
 
-                if (state==1) {
-                        checkT = true
-                }else{
-                    checkT = false
-                }
+                checkT = state==1
                 }
 
             override fun onFinish() {
                 if (checkT) {
-                    val intent =Intent(this@MainActivity, RegandLogActivity::class.java)
+                    var intent =Intent(this@MainActivity, RegandLogActivity::class.java)
                         startActivity(intent)
                 }else{
-                    val intent =Intent(this@MainActivity, ActivityOnboard::class.java)
+                    var intent =Intent(this@MainActivity, ActivityOnboard::class.java)
                     startActivity(intent)
                 }
                 finish()

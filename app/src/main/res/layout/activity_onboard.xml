@@ -17,15 +17,17 @@
 
     <com.google.android.material.tabs.TabLayout
         android:id="@+id/tabLayout"
-        android:layout_width="70dp"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="348dp"
+        android:layout_marginStart="147dp"
+        android:layout_marginTop="332dp"
+        android:layout_marginEnd="146dp"
         android:background="@android:color/transparent"
         android:padding="8dp"
         android:translationY="16dp"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/viewPager"
         app:tabBackground="@drawable/viewpager_indicators"
         app:tabGravity="center"
         app:tabIndicatorHeight="0dp" />

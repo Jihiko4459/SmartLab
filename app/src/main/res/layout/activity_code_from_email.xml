@@ -12,6 +12,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="188dp"
         android:text="Введите код из Email"
+        android:textSize="17sp"
         android:textColor="@color/black"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
@@ -38,15 +39,30 @@
 
     <ImageButton
         android:id="@+id/imageButton2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="24dp"
         android:background="@color/white"
-        android:layout_width="48dp"
-        android:layout_height="48dp"
         android:onClick="back"
-        android:layout_marginStart="9dp"
-        android:layout_marginTop="2dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/back"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:src="@drawable/back"  />
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView16"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="67dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="66dp"
+        android:text="Отправить код повторно можно будет через 59 секунд"
+        android:textAlignment="center"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/otp_view" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

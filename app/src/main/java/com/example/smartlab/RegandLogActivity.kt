@@ -21,7 +21,7 @@ import java.util.regex.Pattern
 class RegandLogActivity : AppCompatActivity() {
     lateinit var email:EditText
     lateinit var button: MaterialButton
-    val pattern=("[a-z0-9]{1,100}"+"@"+"[a-z]{1,6}"+"\\."+"[a-z]{1,5}")
+    val pattern=("[a-z0-9]{1,100}"+"@"+"[a-z]{1,10}"+"\\."+"[a-z]{1,5}")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_regand_log)

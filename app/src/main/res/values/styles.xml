@@ -10,4 +10,10 @@
         <item name="android:textSize">24sp</item>
         <item name="android:textColor">@color/black</item>
     </style>
+    <style name="DropdowmStyle" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu">
+        <item name="boxBackgroundColor">#EBEBEB</item>
+        <item name="boxStrokeColor">#F5F5F9</item>
+        <item name="boxStrokeWidth">2dp</item>
+        <item name="cornerRadius">10dp</item>
+    </style>
 </resources>

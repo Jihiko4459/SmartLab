@@ -26,10 +26,10 @@ class MainActivity : AppCompatActivity() {
 
             override fun onFinish() {
                 if (checkT) {
-                    var intent =Intent(this@MainActivity, RegandLogActivity::class.java)
+                    val intent =Intent(this@MainActivity, RegandLogActivity::class.java)
                         startActivity(intent)
                 }else{
-                    var intent =Intent(this@MainActivity, ActivityOnboard::class.java)
+                    val intent =Intent(this@MainActivity, ActivityOnboard::class.java)
                     startActivity(intent)
                 }
                 finish()

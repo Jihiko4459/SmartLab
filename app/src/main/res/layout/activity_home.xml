@@ -5,67 +5,32 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".HomeActivity">
-    <androidx.appcompat.widget.SearchView
-    android:id="@+id/searchView"
-    app:queryHint="Искать анализы"
-    app:iconifiedByDefault="false"
-    android:layout_width="match_parent"
-    android:layout_height="48dp"
-    android:layout_marginStart="20dp"
-    android:layout_marginTop="68dp"
-    android:layout_marginEnd="20dp"
-    android:background="@drawable/selected_input"
-    app:searchIcon="@drawable/search_icon"
-    app:layout_constraintEnd_toEndOf="parent"
-    app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintTop_toTopOf="parent" >
 
-</androidx.appcompat.widget.SearchView>
 
-    <ScrollView
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/navi"
         android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginTop="32dp"
+        android:layout_height="66dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/searchView">
+        app:menu="@menu/navimenu"
+        app:itemIconSize="34dp"
+        app:itemTextColor="@drawable/coloricon"
+        app:itemIconTint="@drawable/coloricon"
+        app:labelVisibilityMode="labeled"
+        app:itemRippleColor="@color/white">
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
+    </com.google.android.material.bottomnavigation.BottomNavigationView>
 
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
+    <FrameLayout
+        android:id="@+id/framefr"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toTopOf="@+id/navi"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
-                <TextView
-                    android:id="@+id/textView19"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="20dp"
-                    android:text="Акции и новости"
-                    android:textSize="17sp"
-                    android:textStyle="bold"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-                <HorizontalScrollView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent">
-
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:orientation="vertical" />
-
-                </HorizontalScrollView>
-            </androidx.constraintlayout.widget.ConstraintLayout>
-
-        </LinearLayout>
-    </ScrollView>
+    </FrameLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

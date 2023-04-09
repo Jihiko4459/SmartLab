@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:icon="@drawable/analisys"
+    android:id="@+id/analis"
+    android:title="Анализы"
+    android:orderInCategory="1"/>
+
+    <item android:icon="@drawable/result"
+        android:id="@+id/res"
+        android:title="Результаты"
+        android:orderInCategory="2"/>
+    <item android:icon="@drawable/support"
+        android:id="@+id/sup"
+        android:title="Поддержка"
+        android:orderInCategory="3"/>
+    <item android:icon="@drawable/user"
+        android:id="@+id/us"
+        android:title="Профиль"
+        android:orderInCategory="4"/>
+</menu>

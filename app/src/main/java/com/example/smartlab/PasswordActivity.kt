@@ -1,22 +1,57 @@
 package com.example.smartlab
 
 import android.content.Intent
+import android.content.SharedPreferences
 import android.graphics.Color
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import android.view.View.OnTouchListener
+import android.widget.ImageButton
+import android.widget.ImageView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.AppCompatButton
 import `in`.aabhasjindal.otptextview.OtpTextView
 
 
 class PasswordActivity : AppCompatActivity() {
-    lateinit var but1:AppCompatButton
-    lateinit var otp1:OtpTextView
+    var skip: SharedPreferences?=null
+    private lateinit var firstPin : ImageView
+    private lateinit var secondPin :ImageView
+    private lateinit var firdPin :ImageView
+    private lateinit var fourPin :ImageView
+    private lateinit var but10: ImageButton
+    private var numberButtons = mutableListOf<AppCompatButton>()
+    private var passCount :Int = 0
+    private var passFull :Boolean = false
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_password)
-        but1=findViewById(R.id.button3)
+        skip=getSharedPreferences(TABLE, MODE_PRIVATE)
+
+        numberButtons.add(0,findViewById(R.id.button16))
+        numberButtons.add(1,findViewById(R.id.button3))
+        numberButtons.add(2,findViewById(R.id.button4))
+        numberButtons.add(3,findViewById(R.id.button9))
+        numberButtons.add(4,findViewById(R.id.button10))
+        numberButtons.add(5,findViewById(R.id.button11))
+        numberButtons.add(6,findViewById(R.id.button12))
+        numberButtons.add(7,findViewById(R.id.button13))
+        numberButtons.add(8,findViewById(R.id.button14))
+        numberButtons.add(9,findViewById(R.id.button15))
+
+        firstPin = findViewById(R.id.image5)
+        secondPin = findViewById(R.id.image6)
+        firdPin = findViewById(R.id.image8)
+        fourPin = findViewById(R.id.image9)
+
+        for (button in numberButtons) {
+            button.setOnClickListener {
+                passCount++
+                Log.d("COUNTER_BUT1","$passCount")
+                nextActivity()
+            }
+        }
     }
 
     fun miss3(view: View) {
@@ -24,29 +59,33 @@ class PasswordActivity : AppCompatActivity() {
         startActivity(intent)
         finish()
     }
+    private fun nextActivity(){
 
-    fun num1(view: View) {
-
-
-       // but1.setOnTouchListener(OnTouchListener())
-       /* if(but1.isPressed) {
-            but1.setOnClickListener {
-                but1.setTextColor(Color.parseColor("white"))
+        when (passCount) {
+            1 -> firstPin.background = resources.getDrawable(R.drawable.otp_fill, null)
+            2 -> secondPin.background = resources.getDrawable(R.drawable.otp_fill, null)
+            3 -> firdPin.background = resources.getDrawable(R.drawable.otp_fill, null)
+            4 -> fourPin.background = resources.getDrawable(R.drawable.otp_fill, null)
+            else -> { // Note the block
+                print("x is neither 1 nor 2")
             }
-        }else {
-            but1.setOnClickListener {
-                but1.setTextColor(Color.parseColor("black"))
+        }
+        if (passCount == 4) {
+            passFull = true
+            Log.d("COUNTER_STATUS", "$passFull")
+            if (passFull) {
+                val intent = Intent(this@PasswordActivity, CreateActivity::class.java)
+                startActivity(intent)
+                savestate(1)
+                finish()
             }
-        }*/
+        }
+
+
     }
-    fun num2(view: View) {}
-    fun num3(view: View) {}
-    fun num4(view: View) {}
-    fun num5(view: View) {}
-    fun num6(view: View) {}
-    fun num7(view: View) {}
-    fun num8(view: View) {}
-    fun num9(view: View) {}
-    fun num0(view: View) {}
-    fun del(view: View) {}
+    private fun savestate(s:Int){
+        val editor=skip?.edit()
+        editor?.putInt("pass_state", s)
+        editor?.apply()
+    }
 }

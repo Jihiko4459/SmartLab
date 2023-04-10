@@ -39,20 +39,17 @@ class ActivityOnboard : AppCompatActivity() {
 
         val intent= Intent(this@ActivityOnboard, RegandLogActivity::class.java)
         startActivity(intent)
-        var i = 1
-        savestate(i)
+        savestate(1)
     }
     fun miss2(view: View) {
         val intent= Intent(this@ActivityOnboard, RegandLogActivity::class.java)
         startActivity(intent)
-        var i = 1
-        savestate(i)
+        savestate(1)
     }
     fun complete(view: View) {
         val intent= Intent(this@ActivityOnboard, RegandLogActivity::class.java)
         startActivity(intent)
-        var i = 1
-        savestate(i)
+        savestate(1)
     }
 
 

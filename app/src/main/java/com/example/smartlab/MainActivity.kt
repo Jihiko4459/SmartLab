@@ -14,7 +14,7 @@ class MainActivity : AppCompatActivity() {
     var checkT: Boolean=false
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-     window.setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN)
+        window.setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN)
         setContentView(R.layout.activity_main)
         skip=getSharedPreferences(TABLE, MODE_PRIVATE)
         state = skip?.getInt("button_state", 0)!!

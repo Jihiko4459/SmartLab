@@ -21,6 +21,8 @@ class CodeFromEmailActivity : AppCompatActivity() {
     lateinit var email: String
     lateinit var binding: ActivityCodeFromEmailBinding
     lateinit var sharedPreferences: SharedPreferences
+    var state = 0
+    var checkT: Boolean = false
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityCodeFromEmailBinding.inflate(layoutInflater)
@@ -30,6 +32,7 @@ class CodeFromEmailActivity : AppCompatActivity() {
         }
         onInputCodeListener()
         sharedPreferences = getSharedPreferences("main", MODE_PRIVATE)
+        state = sharedPreferences.getInt("pass_state", 0)
     }
 
     fun back(view: View) {

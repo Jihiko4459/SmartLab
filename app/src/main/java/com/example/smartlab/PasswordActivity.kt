@@ -20,10 +20,10 @@ class PasswordActivity : AppCompatActivity() {
     private lateinit var secondPin :ImageView
     private lateinit var firdPin :ImageView
     private lateinit var fourPin :ImageView
-    private lateinit var but10: ImageButton
     private var numberButtons = mutableListOf<AppCompatButton>()
     private var passCount :Int = 0
     private var passFull :Boolean = false
+    private lateinit var del_button : ImageButton
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_password)
@@ -45,6 +45,13 @@ class PasswordActivity : AppCompatActivity() {
         firdPin = findViewById(R.id.image8)
         fourPin = findViewById(R.id.image9)
 
+        del_button = findViewById(R.id.imageButton)
+
+        del_button.setOnClickListener{
+            passCount--
+            Log.d("COUNTER_BUT1","$passCount")
+            nextActivity()
+        }
         for (button in numberButtons) {
             button.setOnClickListener {
                 passCount++

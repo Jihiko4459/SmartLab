@@ -62,7 +62,6 @@
         android:ems="10"
         android:hint="example@mail.ru"
         android:fontFamily="@font/sfprodisplay_regular"
-
         android:inputType="textEmailAddress"
         android:minHeight="48dp"
         android:textSize="15sp"

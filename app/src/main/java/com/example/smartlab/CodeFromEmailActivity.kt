@@ -22,7 +22,6 @@ class CodeFromEmailActivity : AppCompatActivity() {
     lateinit var binding: ActivityCodeFromEmailBinding
     lateinit var sharedPreferences: SharedPreferences
     var state = 0
-    var checkT: Boolean = false
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityCodeFromEmailBinding.inflate(layoutInflater)

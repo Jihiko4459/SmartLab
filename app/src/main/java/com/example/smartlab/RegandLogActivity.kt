@@ -29,11 +29,7 @@ class RegandLogActivity : AppCompatActivity() {
         button = findViewById(R.id.button)
 
         email.addTextChangedListener { text ->
-            if (text.toString().length > 0) {
-                button.isEnabled = true
-            } else {
-                button.isEnabled = false
-            }
+            button.isEnabled = text.toString().isNotEmpty()
         }
     }
     fun emailValid(text:String):Boolean{

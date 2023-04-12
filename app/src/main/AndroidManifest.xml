@@ -22,12 +22,9 @@
             android:name=".CreateActivity"
             android:exported="false" />
 
-
         <activity
             android:name=".PasswordActivity"
             android:exported="false"/>
-
-
 
         <activity
             android:name=".CodeFromEmailActivity"
@@ -40,6 +37,7 @@
         <activity
             android:name=".ActivityOnboard"
             android:exported="false" />
+
         <activity
             android:name=".MainActivity"
             android:exported="true">

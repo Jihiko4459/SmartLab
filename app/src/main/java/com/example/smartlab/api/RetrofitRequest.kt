@@ -12,7 +12,7 @@ interface RetrofitRequest {
     fun sendSignInCode(@Header("email") email: String, @Header("code") code: String): Call<SuccessToken>
 
     @GET(/* value = */ "news")
-    fun loadNewsSheet() : Call<LoadNews>
+    fun loadNewsSheet() : Call<List<LoadNews>>
     @GET(/* value = */ "catalog")
     fun loadCatalogList() : Call<List<LoadCatalog>>
 

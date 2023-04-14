@@ -27,7 +27,7 @@ class CatalogAdapter(private val ctx: Context, private val data: List<LoadCatalo
 
     override fun onBindViewHolder(holder: Link, position: Int) {
         holder.load_name.text = data[position].name
-        holder.load_price.text = data[position].price
+        holder.load_price.text = data[position].price+" ₽"
         holder.load_time.text = data[position].time
     }
 }

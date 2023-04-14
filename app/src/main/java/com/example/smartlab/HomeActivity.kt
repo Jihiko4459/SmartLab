@@ -2,6 +2,8 @@ package com.example.smartlab
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
+import android.widget.Toast
 import androidx.viewpager2.widget.ViewPager2
 import com.example.smartlab.databinding.ActivityHomeBinding
 import com.google.android.material.bottomnavigation.BottomNavigationView
@@ -34,5 +36,8 @@ class HomeActivity : AppCompatActivity() {
             true
         }
 
+    }
+    fun save(view: View) {
+        Toast.makeText(this, "Данные сохранены", Toast.LENGTH_LONG).show()
     }
 }

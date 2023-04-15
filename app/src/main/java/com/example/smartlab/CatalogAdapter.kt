@@ -11,7 +11,7 @@ import com.example.smartlab.models.LoadCatalog
 class CatalogAdapter(private val ctx: Context, private val data: List<LoadCatalog>) :
     RecyclerView.Adapter<CatalogAdapter.Link>() {
     class Link(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        val load_name: TextView = itemView.findViewById(R.id.name)
+        val load_name: TextView = itemView.findViewById(R.id.name1)
         val load_price: TextView = itemView.findViewById(R.id.money)
         val load_time: TextView = itemView.findViewById(R.id.time)
     }

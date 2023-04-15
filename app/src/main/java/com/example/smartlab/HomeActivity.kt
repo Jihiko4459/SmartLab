@@ -4,22 +4,21 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import android.widget.LinearLayout
 import android.widget.Toast
-import androidx.viewpager2.widget.ViewPager2
+import androidx.core.view.isVisible
 import com.example.smartlab.databinding.ActivityHomeBinding
 import com.google.android.material.bottomnavigation.BottomNavigationView
-import com.google.android.material.navigation.NavigationView
-import com.google.android.material.tabs.TabLayoutMediator
 
 class HomeActivity : AppCompatActivity() {
-    lateinit var bn: BottomNavigationView
+    lateinit var bind:ActivityHomeBinding
     private val falist = listOf(AnalizisFragment(), ResultFragment(), SupportFragment(), ProfileFragment())
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_home)
-        bn=findViewById(R.id.navi)
+        bind= ActivityHomeBinding.inflate(layoutInflater)
+        setContentView(bind.root)
         supportFragmentManager.beginTransaction().replace(R.id.framefr, falist[0]).commit()
-        bn.setOnItemSelectedListener {
+        bind.navi.setOnItemSelectedListener {
             when(it.itemId){
                 R.id.analis->{
                     supportFragmentManager.beginTransaction().replace(R.id.framefr, falist[0]).commit()
@@ -44,5 +43,10 @@ class HomeActivity : AppCompatActivity() {
     }
     fun save(view: View) {
         Toast.makeText(this, "Данные сохранены", Toast.LENGTH_LONG).show()
+    }
+
+    fun vis(view: View) {
+        Toast.makeText(this, "Заказ добавлен в корзину", Toast.LENGTH_LONG).show()
+//        bind.line.isVisible=true
     }
 }

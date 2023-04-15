@@ -118,17 +118,29 @@
                         app:layout_constraintTop_toBottomOf="@+id/categor"
                         tools:listitem="@layout/cards_item" />
 
+                    <TextView
+                        android:id="@+id/textView47"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:layout_marginTop="108dp"
+                        android:text="                  "
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.696"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/catalog" />
+
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
             </LinearLayout>
         </ScrollView>
 
         <LinearLayout
-            android:layout_width="0dp"
+            android:id="@+id/line"
+            android:layout_width="match_parent"
             android:layout_height="104dp"
             android:layout_marginBottom="66dp"
-            android:orientation="horizontal"
             android:background="@color/white"
+            android:orientation="horizontal"
             android:visibility="visible"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -136,8 +148,7 @@
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="1">
+                android:layout_height="match_parent">
 
                 <androidx.appcompat.widget.AppCompatButton
                     android:id="@+id/button6"
@@ -146,23 +157,23 @@
                     android:layout_marginStart="20dp"
                     android:layout_marginEnd="20dp"
                     android:layout_weight="1"
-                    android:text="В корзину"
-                    android:onClick="onCart"
-                    android:gravity="start|center"
+                    android:background="@drawable/button1"
+                    android:drawableStart="@drawable/icons"
                     android:drawablePadding="16dp"
-                    android:textAllCaps="false"
+                    android:fontFamily="@font/sfprodisplay_bold"
+                    android:gravity="start|center"
+                    android:onClick="onCart"
                     android:paddingStart="16dp"
+                    android:text="В корзину"
+                    android:textAllCaps="false"
                     android:textColor="@color/white"
                     android:textSize="17sp"
-                    android:background="@drawable/button1"
-                    android:fontFamily="@font/sfprodisplay_bold"
-                    android:drawableStart="@drawable/icons"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
             </androidx.constraintlayout.widget.ConstraintLayout>
-
         </LinearLayout>
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 </FrameLayout>

@@ -28,10 +28,11 @@
         </androidx.appcompat.widget.SearchView>
 
         <ScrollView
-            android:scrollbars="none"
+            android:id="@+id/scrollView2"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_marginTop="32dp"
+            android:scrollbars="none"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -121,5 +122,47 @@
 
             </LinearLayout>
         </ScrollView>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="104dp"
+            android:layout_marginBottom="66dp"
+            android:orientation="horizontal"
+            android:background="@color/white"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/button6"
+                    android:layout_width="0dp"
+                    android:layout_height="56dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_weight="1"
+                    android:text="В корзину"
+                    android:onClick="onCart"
+                    android:gravity="start|center"
+                    android:drawablePadding="16dp"
+                    android:textAllCaps="false"
+                    android:paddingStart="16dp"
+                    android:textColor="@color/white"
+                    android:textSize="17sp"
+                    android:background="@drawable/button1"
+                    android:fontFamily="@font/sfprodisplay_bold"
+                    android:drawableStart="@drawable/icons"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </LinearLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>
 </FrameLayout>

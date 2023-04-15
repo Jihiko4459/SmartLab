@@ -29,7 +29,7 @@ class PayActivity : AppCompatActivity() {
 
 
             override fun onFinish() {
-                val intent = Intent(this@PayActivity, RegandLogActivity::class.java)
+                val intent = Intent(this@PayActivity, FinishActivity::class.java)
                 startActivity(intent)
                 finish()
             }

@@ -14,12 +14,11 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <ImageView
-            android:id="@+id/simple_image"
-            android:layout_width="48dp"
+            android:id="@+id/close"
+            android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:importantForAccessibility="no"
-            app:srcCompat="@drawable/ic_launcher_foreground"
-            app:tint="#32CD32"/>
+            android:src="@drawable/close" />
 
         <TextView
             android:id="@+id/simple_text"

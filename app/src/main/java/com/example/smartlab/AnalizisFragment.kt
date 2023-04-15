@@ -51,4 +51,6 @@ class AnalizisFragment : Fragment() {
         return root
     }
 
+
+
 }

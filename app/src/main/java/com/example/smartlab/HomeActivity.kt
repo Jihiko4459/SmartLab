@@ -1,5 +1,6 @@
 package com.example.smartlab
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
@@ -36,6 +37,10 @@ class HomeActivity : AppCompatActivity() {
             true
         }
 
+    }
+    fun onCart(view: View) {
+        val intent= Intent(this@HomeActivity, CartActivity::class.java)
+        startActivity(intent)
     }
     fun save(view: View) {
         Toast.makeText(this, "Данные сохранены", Toast.LENGTH_LONG).show()

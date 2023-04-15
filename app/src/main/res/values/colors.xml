@@ -14,4 +14,5 @@
     <color name="backcolor4">#2254F5</color>
     <color name="color_selected">#57A9FF</color>
     <color name="butnumsel">#1A6FEE</color>
+    <color name="gray_back">#DCD8D8</color>
 </resources>

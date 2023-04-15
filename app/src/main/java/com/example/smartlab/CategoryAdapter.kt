@@ -23,6 +23,9 @@ class CategoryAdapter(private val ctx: Context, private val data: List<LoadCatal
 
     override fun onBindViewHolder(holder: Link, position: Int) {
         holder.cat.text= data[position].category
+//        holder.itemView.setOnClickListener {
+//            holder.cat.isSelected=true
+//        }
     }
 
     override fun getItemCount(): Int {

@@ -10,6 +10,7 @@
     <string name="invalid_password">Password must be >5 characters</string>
     <string name="login_failed">"Login failed"</string>
     <!-- TODO: Remove or change this placeholder text -->
+    <string name="status">Связываемся с банком...</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string-array name="gender">
         <item>Мужской</item>
